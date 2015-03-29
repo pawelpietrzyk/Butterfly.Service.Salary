@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DataModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DataModelStoreContainer">
+          <EntitySet Name="SalaryComponentDef" EntityType="DataModel.Store.SalaryComponentDef" store:Type="Tables" />
+          <EntitySet Name="SalaryComponents" EntityType="DataModel.Store.SalaryComponents" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="SalaryComponentDef">
+          <Key>
+            <PropertyRef Name="CompId" />
+          </Key>
+          <Property Name="CompId" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="CompName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CompDesc" Type="nvarchar" MaxLength="1000" />
+          <Property Name="CompType" Type="int" Nullable="false" />
+          <Property Name="CompCalcMethod" Type="int" />
+          <Property Name="CompCalcValue" Type="numeric" />
+        </EntityType>
+        <EntityType Name="SalaryComponents">
+          <Key>
+            <PropertyRef Name="CompId" />
+          </Key>
+          <Property Name="CompId" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="CompName" Type="nvarchar" MaxLength="100" />
+          <Property Name="CompValue" Type="numeric" />
+          <Property Name="CompType" Type="int" />
+          <Property Name="CompDescription" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SalaryComponents" EntityType="DataModel.SalaryComponents" />
+          <EntitySet Name="SalaryComponentDef" EntityType="DataModel.SalaryComponentDef" />
+        </EntityContainer>
+        <EntityType Name="SalaryComponents">
+          <Key>
+            <PropertyRef Name="CompId" />
+          </Key>
+          <Property Name="CompId" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="CompName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CompValue" Type="Decimal" Precision="18" Scale="0" DefaultValue="0" />
+          <Property Name="CompType" Type="Int32" DefaultValue="0" />
+          <Property Name="CompDescription" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SalaryComponentDef">
+          <Key>
+            <PropertyRef Name="CompId" />
+          </Key>
+          <Property Type="String" Name="CompId" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CompDesc" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CompType" Nullable="false" DefaultValue="0" />
+          <Property Type="Int32" Name="CompCalcMethod" Nullable="false" DefaultValue="0" />
+          <Property Type="Decimal" Name="CompCalcValue" Precision="18" Scale="0" Nullable="false" DefaultValue="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="DataEntities">
+          <EntitySetMapping Name="SalaryComponents">
+            <EntityTypeMapping TypeName="DataModel.SalaryComponents">
+              <MappingFragment StoreEntitySet="SalaryComponents">
+                <ScalarProperty Name="CompId" ColumnName="CompId" />
+                <ScalarProperty Name="CompName" ColumnName="CompName" />
+                <ScalarProperty Name="CompValue" ColumnName="CompValue" />
+                <ScalarProperty Name="CompType" ColumnName="CompType" />
+                <ScalarProperty Name="CompDescription" ColumnName="CompDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SalaryComponentDef">
+            <EntityTypeMapping TypeName="DataModel.SalaryComponentDef">
+              <MappingFragment StoreEntitySet="SalaryComponentDef">
+                <ScalarProperty Name="CompCalcValue" ColumnName="CompCalcValue" />
+                <ScalarProperty Name="CompCalcMethod" ColumnName="CompCalcMethod" />
+                <ScalarProperty Name="CompType" ColumnName="CompType" />
+                <ScalarProperty Name="CompDesc" ColumnName="CompDesc" />
+                <ScalarProperty Name="CompName" ColumnName="CompName" />
+                <ScalarProperty Name="CompId" ColumnName="CompId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Butterfly.Service.Salary", "Butterfly.Service.Salary\Butterfly.Service.Salary.csproj", "{E1BFAF6D-4A0B-420C-9FAA-99122B115313}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Butterfly.Service.Rest", "..\Butterfly.Service.Rest\Butterfly.Service.Rest\Butterfly.Service.Rest.csproj", "{9D5A0F71-239B-4F7F-B0BA-477012B44D3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1BFAF6D-4A0B-420C-9FAA-99122B115313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1BFAF6D-4A0B-420C-9FAA-99122B115313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1BFAF6D-4A0B-420C-9FAA-99122B115313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1BFAF6D-4A0B-420C-9FAA-99122B115313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D5A0F71-239B-4F7F-B0BA-477012B44D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D5A0F71-239B-4F7F-B0BA-477012B44D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D5A0F71-239B-4F7F-B0BA-477012B44D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D5A0F71-239B-4F7F-B0BA-477012B44D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

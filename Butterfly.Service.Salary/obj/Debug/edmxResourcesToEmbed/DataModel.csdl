@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SalaryComponents" EntityType="DataModel.SalaryComponents" />
+    <EntitySet Name="SalaryComponentDef" EntityType="DataModel.SalaryComponentDef" />
+  </EntityContainer>
+  <EntityType Name="SalaryComponents">
+    <Key>
+      <PropertyRef Name="CompId" />
+    </Key>
+    <Property Name="CompId" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="CompName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CompValue" Type="Decimal" Precision="18" Scale="0" DefaultValue="0" />
+    <Property Name="CompType" Type="Int32" DefaultValue="0" />
+    <Property Name="CompDescription" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SalaryComponentDef">
+    <Key>
+      <PropertyRef Name="CompId" />
+    </Key>
+    <Property Type="String" Name="CompId" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CompName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CompDesc" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CompType" Nullable="false" DefaultValue="0" />
+    <Property Type="Int32" Name="CompCalcMethod" Nullable="false" DefaultValue="0" />
+    <Property Type="Decimal" Name="CompCalcValue" Precision="18" Scale="0" Nullable="false" DefaultValue="0" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,9 @@
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\obj\Debug\Butterfly.Service.Salary.csprojResolveAssemblyReference.cache
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\bin\Butterfly.Service.Salary.dll
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\bin\Butterfly.Service.Salary.pdb
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\bin\Butterfly.Service.Rest.dll
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\bin\EntityFramework.dll
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\bin\Butterfly.Service.Rest.pdb
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\bin\EntityFramework.xml
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\obj\Debug\Butterfly.Service.Salary.dll
+C:\Repo\Butterfly.Service.Salary\Butterfly.Service.Salary\obj\Debug\Butterfly.Service.Salary.pdb

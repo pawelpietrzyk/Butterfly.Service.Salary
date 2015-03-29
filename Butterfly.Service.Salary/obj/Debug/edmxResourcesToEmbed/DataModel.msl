@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="DataEntities">
+    <EntitySetMapping Name="SalaryComponents">
+      <EntityTypeMapping TypeName="DataModel.SalaryComponents">
+        <MappingFragment StoreEntitySet="SalaryComponents">
+          <ScalarProperty Name="CompId" ColumnName="CompId" />
+          <ScalarProperty Name="CompName" ColumnName="CompName" />
+          <ScalarProperty Name="CompValue" ColumnName="CompValue" />
+          <ScalarProperty Name="CompType" ColumnName="CompType" />
+          <ScalarProperty Name="CompDescription" ColumnName="CompDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalaryComponentDef">
+      <EntityTypeMapping TypeName="DataModel.SalaryComponentDef">
+        <MappingFragment StoreEntitySet="SalaryComponentDef">
+          <ScalarProperty Name="CompCalcValue" ColumnName="CompCalcValue" />
+          <ScalarProperty Name="CompCalcMethod" ColumnName="CompCalcMethod" />
+          <ScalarProperty Name="CompType" ColumnName="CompType" />
+          <ScalarProperty Name="CompDesc" ColumnName="CompDesc" />
+          <ScalarProperty Name="CompName" ColumnName="CompName" />
+          <ScalarProperty Name="CompId" ColumnName="CompId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

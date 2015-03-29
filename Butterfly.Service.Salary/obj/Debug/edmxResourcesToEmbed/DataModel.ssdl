@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DataModelStoreContainer">
+    <EntitySet Name="SalaryComponentDef" EntityType="DataModel.Store.SalaryComponentDef" store:Type="Tables" />
+    <EntitySet Name="SalaryComponents" EntityType="DataModel.Store.SalaryComponents" store:Type="Tables" />
+  </EntityContainer>
+  <EntityType Name="SalaryComponentDef">
+    <Key>
+      <PropertyRef Name="CompId" />
+    </Key>
+    <Property Name="CompId" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="CompName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompDesc" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CompType" Type="int" Nullable="false" />
+    <Property Name="CompCalcMethod" Type="int" />
+    <Property Name="CompCalcValue" Type="numeric" />
+  </EntityType>
+  <EntityType Name="SalaryComponents">
+    <Key>
+      <PropertyRef Name="CompId" />
+    </Key>
+    <Property Name="CompId" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="CompName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompValue" Type="numeric" />
+    <Property Name="CompType" Type="int" />
+    <Property Name="CompDescription" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+</Schema>
